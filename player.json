@@ -1,0 +1,51 @@
+[{
+    "name":"caroline",
+    "age":17,
+    "sex":"female",
+    "birth":"oct 10th",
+    "hobby":"cosplay",
+    "desc":"",
+    "Agility":"Increased movement speed when holding a shotgun.",
+    "level":
+        {
+            "level1":"When holding a shotgun, movement speed is increased by 3%.",
+            "level2":"When holding a shotgun, movement speed is increased by 4%.",
+            "level3":"When holding a shotgun, movement speed is increased by 5%.",
+            "level4":"When holding a shotgun, movement speed is increased by 6%."
+
+
+        },
+    "slots":{
+        "slot1":"caroline",
+        "slot2":"lock",
+        "slot3":"lock",
+        "slot4":"lock",
+        "slot5":"lock"
+    }
+    },
+    {
+        "name":"kelly",
+        "age":17,
+        "sex":"female",
+        "birth":"april 01th",
+        "hobby":"",
+        "desc":"",
+        "Agility":"Increase sprinting speed.",
+        "level":
+            {
+                "level1":"printing speed increased by 1%.",
+                "level2":"printing speed increased by 2%.",
+                "level3":"printing speed increased by 3%.",
+                "level4":"printing speed increased by 4%."
+    
+    
+            },
+        "slots":{
+            "slot1":"kelly",
+            "slot2":"lock",
+            "slot3":"lock",
+            "slot4":"lock",
+            "slot5":"lock"
+        }
+        }
+]
