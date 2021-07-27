@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>free fire player</h1>
+    <ul id="player">
+
+    </ul>
+</body>
+<script>
+       fetch('https://vikramsomai.github.io/freefire-player-api/player.json')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+    for(var i=0;i<=data.length;i++)
+    {
+       
+      
+
+ //document.write(data[i].name);
+var ul = document.getElementById("player");
+var output='';
+for (var i = 0; i<data.length; i++) {
+    // var name = data[i].name;
+    // var li = document.createElement('li');
+    // li.appendChild(document.createTextNode(name));
+    // ul.appendChild(li);
+    // console.log(data[i].name);
+
+    output=output+'<li>'+data[i].Agility+'</li>';
+}
+document.getElementById("player").innerHTML=output;
+    }
+    })
+    .catch(function (err) {
+        console.log("Something went wrong!", err);
+    });
+    
+</script>
+</html>

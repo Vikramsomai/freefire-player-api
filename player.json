@@ -3,6 +3,8 @@
     "age":17,
     "sex":"female",
     "birth":"oct 10th",
+    "image":"img/player/caroline.png",
+    "image-skill":"img/skill/carolineskill.png",
     "hobby":"cosplay",
     "desc":"",
     "Agility":"Increased movement speed when holding a shotgun.",
