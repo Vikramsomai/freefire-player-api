@@ -7,40 +7,282 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+         .card {
+        width: 300px;
+        min-width: 300px;
+        height: auto;
+        background: #fff;
+        border-radius: 30px;
+        position: relative;
+        z-index: 10;
+        margin: 25px;
+        min-height: 356px;
+        transition: all .25s ease;
+        box-shadow: 0px 0px 0px 0px rgba(0,0,0,.08);
+        cursor: pointer;
+    }
+    .card:hover {
+        transform: translate(0, -10px);
+        box-shadow: 0px 17px 35px 0px rgba(0,0,0,.07);
+    }
+    .card:hover .con-img {
+        transform: translate(0,-15px);
+    }
+    .card:hover .con-img img.blur{
+        opacity: .45;
+        transform: translate(-10px, 26px) scale(.85);
+    }
+    .card h3 {
+        position: absolute;
+        font-family: 'Oswald', sans-serif;
+        left: 0px;
+        top: 0px;
+        padding: 15px;
+    }
+    .card i.bx {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        padding: 15px;
+        font-size: 1.3rem;
+    }
+    .card .con-text {
+        padding: 20px;
+    }
+    .card .con-img {
+        /* transform: translate(0,-90px); */
+        width: calc(100% - 60px);
+        margin: 0px 30px;
+        margin-top: -90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .35s ease-out;
+    }
+    .card img {
+        height: 300px;
+    }
+    .card img.blur {
+        position: absolute;
+        filter: blur(15px);
+        z-index: -1;
+        opacity: .35;
+        transform: translate(-10px, 10px) scale(.85);
+        transition: all .35s ease-out;
+    }
+    #img-skill{
+     height: 60px;
+     width:60px;   
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width:100%;
+    }
+    </style>
     <h1>free fire player</h1>
     <ul id="player">
 
     </ul>
+    
+          <div class="container" id="player-data">
+        <div class="card">
+           <h3> <img src="" alt=""id="img-skill"></h3>
+           <i class='bx bx-heart'></i>
+           <div class="con-img">
+            <img src="" alt=""id="img-player">
+              <img class="blur" src="https://raw.githubusercontent.com/luisDanielRoviraContreras/img/master/4.png" alt="">
+           </div>
+           <div class="con-text">
+               <h2 id="player-name">
+                  
+               </h2>
+               <p>
+                   <b> Sex:<span id="gender"></span></b><br>
+                   <b> Age: <span id="age"></span></b><br>
+                   <b> Birthday: <span id="birth"></span></b><br><br>
+                          </p>
+           </div>
+       </div>
+  
+    </div> 
 </body>
 <script>
-       fetch('https://vikramsomai.github.io/freefire-player-api/player.json')
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-    for(var i=0;i<=data.length;i++)
-    {
+  
+    //    fetch('https://api.covid19api.com/summary')
+    // .then(function (response) {
+    //     return response.json();
+    // })
+    // .then(function (data) {
        
-      
-
- //document.write(data[i].name);
-var ul = document.getElementById("player");
-var output='';
-for (var i = 0; i<data.length; i++) {
-    // var name = data[i].name;
-    // var li = document.createElement('li');
-    // li.appendChild(document.createTextNode(name));
-    // ul.appendChild(li);
-    // console.log(data[i].name);
-
-    output=output+'<li>'+data[i].Agility+'</li>';
-}
-document.getElementById("player").innerHTML=output;
+    // })
+    // .catch(function (err) {
+    //     console.log("Something went wrong!", err);
+    // });
+  var  player=[
+    {
+        "name": "caroline",
+        "age": 17,
+        "sex": "female",
+        "birth": "oct 10th",
+        "image": "img/player/caroline.png",
+        "image_skill": "img/skill/carolineskill.png",
+        "hobby": "cosplay",
+        "desc": "caroline is a school girl",
+        "ability": "Increased movement speed when holding a shotgun.",
+        "level": {
+            "level1": "When holding a shotgun, movement speed is increased by 3%.",
+            "level2": "When holding a shotgun, movement speed is increased by 4%.",
+            "level3": "When holding a shotgun, movement speed is increased by 5%.",
+            "level4": "When holding a shotgun, movement speed is increased by 6%."
+        },
+        "slots": {
+            "slot1": "caroline",
+            "slot2": "lock",
+            "slot3": "lock",
+            "slot4": "lock",
+            "slot5": "lock"
+        }
+    },
+    {
+        "name": "kelly",
+        "age": 17,
+        "sex": "female",
+        "birth": "april 01th",
+        "hobby": "sprint",
+        "image": "img/player/kelly.png",
+        "image_skill": "img/skill/kellyskill.png",
+        "desc": "",
+        "ability": "Increase sprinting speed.",
+        "level": {
+            "level1": "printing speed increased by 1%.",
+            "level2": "printing speed increased by 2%.",
+            "level3": "printing speed increased by 3%.",
+            "level4": "printing speed increased by 4%."
+        },
+        "slots": {
+            "slot1": "kelly",
+            "slot2": "lock",
+            "slot3": "lock",
+            "slot4": "lock",
+            "slot5": "lock"
+        }
+    },
+    {
+        "name": "Shani",
+        "age": 30,
+        "sex": "female",
+        "birth": "june 15th",
+        "image": "img/player/shani.png",
+        "image_skill": "img/skill/shaniskill.png",
+        "hobby": null,
+        "desc": 'Shani is a self-made engineer',
+        "ability": "Gear Recycle",
+        "level": {
+            "level1": "Restore 10 armor durability after every kill. Extra durability can upgrade your armor, up to level 3.",
+            "level2": "Restore 10 armor durability after every kill. Extra durability can upgrade your armor, up to level 3.",
+            "level3": "Restore 10 armor durability after every kill. Extra durability can upgrade your armor, up to level 3.",
+            "level4": "Restore 10 armor durability after every kill. Extra durability can upgrade your armor, up to level 3."
+        },
+        "slots": {
+            "slot1": "caroline",
+            "slot2": "lock",
+            "slot3": "lock",
+            "slot4": "lock",
+            "slot5": "lock"
+        }
+    },
+    {
+        "name": "Skyler",
+        "age": 26,
+        "sex": "male",
+        "birth": "july 05th",
+        "image": "img/player/Skyler.png",
+        "image_skill": "img/skill/skylerskill.png",
+        "hobby": null,
+        "desc": "Skyler got his rise to fame as the hottest pop singer-dancer in the country",
+        "ability": "Riptide Rhythm",
+        "level": {
+            "level1": "Restore 10 armor durability after every kill. Extra durability can upgrade your armor, up to level 3.",
+            "level2": "Restore 10 armor durability after every kill. Extra durability can upgrade your armor, up to level 3.",
+            "level3": "Restore 10 armor durability after every kill. Extra durability can upgrade your armor, up to level 3.",
+            "level4": "Restore 10 armor durability after every kill. Extra durability can upgrade your armor, up to level 3."
+        },
+        "slots": {
+            "slot1": "caroline",
+            "slot2": "lock",
+            "slot3": "lock",
+            "slot4": "lock",
+            "slot5": "lock"
+        }
+    },
+    {
+        "name": "Skyler",
+        "age": 26,
+        "sex": "male",
+        "birth": "july 05th",
+        "image": "img/player/Skyler.png",
+        "image_skill": "img/skill/skylerskill.png",
+        "hobby": null,
+        "desc": "Skyler got his rise to fame as the hottest pop singer-dancer in the country",
+        "ability": "Riptide Rhythm"
+    },
+    {
+        "name": "A124",
+        "age": 18,
+        "sex": "male",
+        "birth": " Jan 01st",
+        "image": "img/player/a124.png",
+        "image_skill": "img/skill/a124skill.png",
+        "hobby": null,
+        "desc": "A124 is a robot made with modern technology.",
+        "ability": "Thrill of Battle"
     }
-    })
-    .catch(function (err) {
-        console.log("Something went wrong!", err);
-    });
-    
+];
+
+console.log(player[0].image)
+document.getElementById("img-player").setAttribute("src",player[0].image);
+document.getElementById("img-skill").setAttribute("src",player[0].image_skill);
+document.getElementById("player-name").innerText=player[0].name;
+document.getElementById("gender").innerText=player[0].sex;
+document.getElementById("age").innerText=player[0].age;
+document.getElementById("birth").innerText=player[0].birth;
+
+
+var output='';
+for(var i=0;i<player.length;i++)
+{
+    console.log(player[i].name);
+   output=output+`
+    <div class="card">
+           <h3> <img src="`+player[i].image_skill+`" alt=""id="img-skill"></h3>
+           <i class='bx bx-heart'></i>
+           <div class="con-img">
+            <img src="`+player[i].image+`" alt=""id="img-player">
+              <img class="blur" src="https://raw.githubusercontent.com/luisDanielRoviraContreras/img/master/4.png" alt="">
+           </div>
+           <div class="con-text">
+               <h2 id="player-name">
+                `+player[i].name+`
+               </h2>
+               <p>
+                   <b> Sex:<span id="gender">`+player[i].sex+`</span></b><br>
+                   <b> Age: <span id="age">`+player[i].age+`</span></b><br>
+                   <b> Birthday: <span id="birth">`+player[i].birth+`</span></b><br><br>
+                          </p>
+           </div>
+       </div>
+  
+    `;
+}
+
+document.getElementById("player-data").innerHTML=output;
 </script>
 </html>

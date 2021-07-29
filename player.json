@@ -1,53 +1,107 @@
-[{
-    "name":"caroline",
-    "age":17,
-    "sex":"female",
-    "birth":"oct 10th",
-    "image":"img/player/caroline.png",
-    "image-skill":"img/skill/carolineskill.png",
-    "hobby":"cosplay",
-    "desc":"",
-    "Agility":"Increased movement speed when holding a shotgun.",
-    "level":
-        {
-            "level1":"When holding a shotgun, movement speed is increased by 3%.",
-            "level2":"When holding a shotgun, movement speed is increased by 4%.",
-            "level3":"When holding a shotgun, movement speed is increased by 5%.",
-            "level4":"When holding a shotgun, movement speed is increased by 6%."
-
-
+[
+    {
+        "name": "caroline",
+        "age": 17,
+        "sex": "female",
+        "birth": "oct 10th",
+        "image": "img/player/caroline.png",
+        "image_skill": "img/skill/carolineskill.png",
+        "hobby": "cosplay",
+        "desc": "caroline is a school girl",
+        "ability": "Increased movement speed when holding a shotgun.",
+        "level": {
+            "level1": "When holding a shotgun, movement speed is increased by 3%.",
+            "level2": "When holding a shotgun, movement speed is increased by 4%.",
+            "level3": "When holding a shotgun, movement speed is increased by 5%.",
+            "level4": "When holding a shotgun, movement speed is increased by 6%."
         },
-    "slots":{
-        "slot1":"caroline",
-        "slot2":"lock",
-        "slot3":"lock",
-        "slot4":"lock",
-        "slot5":"lock"
-    }
+        "slots": {
+            "slot1": "caroline",
+            "slot2": "lock",
+            "slot3": "lock",
+            "slot4": "lock",
+            "slot5": "lock"
+        }
     },
     {
-        "name":"kelly",
-        "age":17,
-        "sex":"female",
-        "birth":"april 01th",
-        "hobby":"",
-        "desc":"",
-        "Agility":"Increase sprinting speed.",
-        "level":
-            {
-                "level1":"printing speed increased by 1%.",
-                "level2":"printing speed increased by 2%.",
-                "level3":"printing speed increased by 3%.",
-                "level4":"printing speed increased by 4%."
-    
-    
-            },
-        "slots":{
-            "slot1":"kelly",
-            "slot2":"lock",
-            "slot3":"lock",
-            "slot4":"lock",
-            "slot5":"lock"
+        "name": "kelly",
+        "age": 17,
+        "sex": "female",
+        "birth": "april 01th",
+        "hobby": "sprint",
+        "desc": "",
+        "ability": "Increase sprinting speed.",
+        "level": {
+            "level1": "printing speed increased by 1%.",
+            "level2": "printing speed increased by 2%.",
+            "level3": "printing speed increased by 3%.",
+            "level4": "printing speed increased by 4%."
+        },
+        "slots": {
+            "slot1": "kelly",
+            "slot2": "lock",
+            "slot3": "lock",
+            "slot4": "lock",
+            "slot5": "lock"
         }
+    },
+    {
+        "name": "Shani",
+        "age": 30,
+        "sex": "female",
+        "birth": "june 15th",
+        "image": "img/player/shani.png",
+        "image_skill": "img/skill/shaniskill.png",
+        "hobby": null,
+        "desc": "Shani is a self-made engineer.",
+        "ability": "Gear Recycle",
+        "level": {
+            "level1": "Restore 10 armor durability after every kill. Extra durability can upgrade your armor, up to level 3.",
+            "level2": "Restore 10 armor durability after every kill. Extra durability can upgrade your armor, up to level 3.",
+            "level3": "Restore 10 armor durability after every kill. Extra durability can upgrade your armor, up to level 3.",
+            "level4": "Restore 10 armor durability after every kill. Extra durability can upgrade your armor, up to level 3."
+        },
+        "slots": {
+            "slot1": "caroline",
+            "slot2": "lock",
+            "slot3": "lock",
+            "slot4": "lock",
+            "slot5": "lock"
         }
+    },
+    {
+        "name": "Skyler",
+        "age": 26,
+        "sex": "male",
+        "birth": "july 05th",
+        "image": "img/player/Skyler.png",
+        "image_skill": "img/skill/skylerskill.png",
+        "hobby": null,
+        "desc": "Skyler got his rise to fame as the hottest pop singer-dancer in the country",
+        "ability": "Riptide Rhythm",
+        "level": {
+            "level1": "Restore 10 armor durability after every kill. Extra durability can upgrade your armor, up to level 3.",
+            "level2": "Restore 10 armor durability after every kill. Extra durability can upgrade your armor, up to level 3.",
+            "level3": "Restore 10 armor durability after every kill. Extra durability can upgrade your armor, up to level 3.",
+            "level4": "Restore 10 armor durability after every kill. Extra durability can upgrade your armor, up to level 3."
+        },
+        "slots": {
+            "slot1": "caroline",
+            "slot2": "lock",
+            "slot3": "lock",
+            "slot4": "lock",
+            "slot5": "lock"
+        }
+    },
+    {
+        "name": "A124",
+        "age": 18,
+        "sex": "male",
+        "birth": " Jan 01st",
+        "image": "img/player/a124.png",
+        "image_skill": "img/skill/a124skill.png",
+        "hobby": null,
+        "desc": "A124 is a robot made with modern technology.",
+        "ability": "Thrill of Battle"
+    }
 ]
